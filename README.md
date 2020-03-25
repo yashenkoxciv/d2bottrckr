@@ -1,7 +1,27 @@
-# d2bottrckr
-naïve tracker (NTD2BOT) which is based on detectron2 and Bag of tricks ReID model. The main idea is that every detected object is close enough to its detection on the previous frame.
+# d2trckr
 
-Put ReID model checkpoint to configs directory:
-https://drive.google.com/open?id=1kGn-c6e0LDsSKG8QkQNeQJ0ySCBE7Inu
+d2trckr 
 
+## Getting Started
 
+### Prerequisites
+
+```
+```
+
+### Installing
+
+Use d2trckr.yml to create conda evironment 
+
+```
+conda env create -f d2trckr.yml
+```
+
+## Usage
+
+Example:
+```
+python run.py configs/config_1_meeting.yml --only_n_frames 1500
+```
+
+Then, use `detections` variable inside loop to process available detections from Detectron2.

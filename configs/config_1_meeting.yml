@@ -1,0 +1,21 @@
+video: /mnt/fileserver/shared/datasets/cameras/Odessa/Duke_on_the_left/fragments/meeting/meeting_set004_00:59:45-00:59:45.mp4
+codec: mp4v #MJPG # H264
+output_fps: 15 #15
+output_w: 1920
+output_h: 1080
+output_dir: output
+
+detector_config: /home/ahab/fileserver/src/detectron2/configs/COCO-Detection/faster_rcnn_X_101_32x8d_FPN_3x.yaml
+detector_weights: detectron2://COCO-Detection/faster_rcnn_X_101_32x8d_FPN_3x/139173657/model_final_68b088.pkl
+
+depthmask_file: configs/duke_depth.jpg
+scenemask_file: configs/odessa_mask_2.png
+
+distance_threshold: 16 #30 #16 #14.0 #9.0 #12.0 #9.0 #8.0
+scenemask_threshold: 0.0
+detector_roi_threshold: 0.7 # 0.5
+frame_threshold: 11 #5
+#reid_threshold: 0.75
+
+reid_weights: 'configs/resnet50_model_120.pth'
+
