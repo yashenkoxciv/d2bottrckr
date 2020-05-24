@@ -1,13 +1,7 @@
-# d2trckr
-
-d2trckr 
-
 ## Getting Started
 
-### Prerequisites
-
-```
-```
+This project is based on detectron2 and Bag of tricks ReID model. The main idea is that every detected object is close enough to its detection on the previous frame. Unfortunately, detectron is tend to miss some detections and produce false-positives (duplicates). See the guy on the left side of the scene.
+![Odessa demo](output/demo.gif).
 
 ### Installing
 
@@ -22,12 +16,18 @@ https://drive.google.com/open?id=1kGn-c6e0LDsSKG8QkQNeQJ0ySCBE7Inu
 
 ## Usage
 
-Example:
 ```
 python run.py configs/config_1_meeting.yml --only_n_frames 1500
+
 ```
 
+And look the results in output folder.
+
+## Developing
+
 Then, use `detections` variable inside loop to process available detections from Detectron2.
+
+## Additional info
 
 See report about this project
 https://drive.google.com/open?id=1jJN71wJbVBdswYePqjiXEIb5SiChG6k7
